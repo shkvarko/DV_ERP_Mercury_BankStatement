@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A54DF3C8-D2C0-41C7-BCB9-0E2035D16FF1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ERPMercuryBankStatement</RootNamespace>
+    <AssemblyName>ERPMercuryBankStatement</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>P:\IT отдел\UniXP\Dll\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>P:\IT отдел\UniXP\Dll\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>UniXP.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v7.2, Version=7.2.4.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v7.2, Version=7.2.4.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v7.2, Version=7.2.4.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v7.2, Version=7.2.4.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v7.2, Version=7.2.4.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v7.2, Version=7.2.4.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v7.2, Version=7.2.4.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="EPPlus">
+      <HintPath>P:\IT отдел\UniXP\EPPlus.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ERP_Mercury.Common">
+      <HintPath>P:\IT отдел\UniXP\Options Dll\ERP_Mercury.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ERP_Mercury.Global">
+      <HintPath>P:\IT отдел\UniXP\Options Dll\ERP_Mercury.Global.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UniXP.Common">
+      <HintPath>P:\IT отдел\UniXP\UniXP.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BankStatementModuleInfo.cs" />
+    <Compile Include="CCustomerInitialDebt.cs" />
+    <Compile Include="Const.cs" />
+    <Compile Include="CPayment.cs" />
+    <Compile Include="frmBankStatement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBankStatement.Designer.cs">
+      <DependentUpon>frmBankStatement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCEarning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCEarning.Designer.cs">
+      <DependentUpon>frmCEarning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChangeAccountPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChangeAccountPlan.Designer.cs">
+      <DependentUpon>frmChangeAccountPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCustomerInitialDebtPaymentType_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustomerInitialDebtPaymentType_1.Designer.cs">
+      <DependentUpon>frmCustomerInitialDebtPaymentType_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCustomerInitialDebtPaymentType_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustomerInitialDebtPaymentType_2.Designer.cs">
+      <DependentUpon>frmCustomerInitialDebtPaymentType_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEarning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEarning.Designer.cs">
+      <DependentUpon>frmEarning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmBankStatement.resx">
+      <DependentUpon>frmBankStatement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCEarning.resx">
+      <DependentUpon>frmCEarning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChangeAccountPlan.resx">
+      <DependentUpon>frmChangeAccountPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCustomerInitialDebtPaymentType_1.resx">
+      <DependentUpon>frmCustomerInitialDebtPaymentType_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCustomerInitialDebtPaymentType_2.resx">
+      <DependentUpon>frmCustomerInitialDebtPaymentType_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEarning.resx">
+      <DependentUpon>frmEarning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UniXP.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMAGES_MONEYSMALL.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\documents1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diskette_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calculator Information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calculator Total.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calculator Warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Check Information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Check Edit 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Check Edit 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Check Account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Books Information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Books Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpreadSheet Total Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpreadSheet Total Check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpreadSheet Total Edit 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpreadSheet Total Edit 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpreadSheet Total Informati.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpreadSheet Total.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bill_back_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\withdrawal_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\withdrawal_back_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\withdrawal_zoom_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Symbol Back.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Symbol Check.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Symbol Back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Decrease Decimal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\column_chart_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Windows.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
